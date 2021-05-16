@@ -1,0 +1,252 @@
+Baseline, MDB data only/75/25 split, kernel= linear, 6 instrument classes
+
+features= ['centroid', 'rms', 'zeroCrossings', 'crest', 'flux', 'mfcc1', 'mfcc2', 'mfcc3', 'mfcc4', 'mfcc5']
+
+
+[[  0  61   0   0   0   0]
+ [  0 484   0   0   0   0]
+ [  0 284   0   0   0   0]
+ [  0  25   0   0   0   0]
+ [  0 802   0   0   0   0]
+ [  0  30   0   0   0   0]]
+C:\Users\Laney\AppData\Local\Programs\Python\Python37-32\lib\site-packages\sklearn\metrics\classification.py:1437: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+              precision    recall  f1-score   support
+          CY       0.00      0.00      0.00        61
+          HH       0.29      1.00      0.45       484
+          KD       0.00      0.00      0.00       284
+          OT       0.00      0.00      0.00        25
+          SD       0.00      0.00      0.00       802
+          TT       0.00      0.00      0.00        30
+    accuracy                           0.29      1686
+   macro avg       0.05      0.17      0.07      1686
+weighted avg       0.08      0.29      0.13      1686
+
+############################################################
+Baseline, MDB data only, 75/25 split, kernel= sigmoid
+
+features= ['centroid', 'rms', 'zeroCrossings', 'crest', 'flux', 'mfcc1', 'mfcc2', 'mfcc3', 'mfcc4', 'mfcc5']
+
+[[ 13  32   0   0  16   0]
+ [140 250   0   0  92   2]
+ [ 76 145   0   0  63   0]
+ [ 15   9   0   0   1   0]
+ [260 358   0   0 178   6]
+ [ 10  11   0   0   9   0]]
+C:\Users\Laney\AppData\Local\Programs\Python\Python37-32\lib\site-packages\sklearn\metrics\classification.py:1437: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+              precision    recall  f1-score   support
+          CY       0.03      0.21      0.05        61
+          HH       0.31      0.52      0.39       484
+          KD       0.00      0.00      0.00       284
+          OT       0.00      0.00      0.00        25
+          SD       0.50      0.22      0.31       802
+          TT       0.00      0.00      0.00        30
+    accuracy                           0.26      1686
+   macro avg       0.14      0.16      0.12      1686
+weighted avg       0.33      0.26      0.26      1686
+
+############################################################
+Baseline, MDB data only, 75/25 split, kernel= poly, deg=2
+features= ['centroid', 'rms', 'zeroCrossings', 'crest', 'flux', 'mfcc1', 'mfcc2', 'mfcc3', 'mfcc4', 'mfcc5']
+
+[[  0  61   0   0   0   0]
+ [  0 380   0   0 104   0]
+ [  0 239   0   0  45   0]
+ [  0  22   0   0   3   0]
+ [  0 659   0   0 143   0]
+ [  0  30   0   0   0   0]]
+C:\Users\Laney\AppData\Local\Programs\Python\Python37-32\lib\site-packages\sklearn\metrics\classification.py:1437: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  'precision', 'predicted', average, warn_for)
+              precision    recall  f1-score   support
+          CY       0.00      0.00      0.00        61
+          HH       0.27      0.79      0.41       484
+          KD       0.00      0.00      0.00       284
+          OT       0.00      0.00      0.00        25
+          SD       0.48      0.18      0.26       802
+          TT       0.00      0.00      0.00        30
+    accuracy                           0.31      1686
+   macro avg       0.13      0.16      0.11      1686
+weighted avg       0.31      0.31      0.24      1686
+
+############################################################
+Baseline, MDB data only, 10 fold cross validation
+fScores= [0.13 0.21 0.3  0.27 0.3  0.24 0.15 0.56 0.17 0.27]
+average F score for MDB cross validation= 0.26
+confusion matrices for each fold of MDB cross validation= [array([[  1,   3,   0,   0,   2,   0],
+       [ 18, 108,   3,   0,  14,   0],
+       [ 19,  87,   7,   0,   6,   0],
+       [  2,  17,   3,   0,   3,   0],
+       [ 57, 275,  31,   0,  20,   0],
+       [  1,  19,   4,   0,   3,   0]], dtype=int64), array([[  1,   4,   0,   0,   0,   0],
+       [ 11, 107,   9,   0,  20,   0],
+       [ 13,  48,   5,   0,  12,   0],
+       [  5,  12,   4,   0,   6,   0],
+       [ 37, 198,  13,   0,  29,   2],
+       [  0,   0,   0,   0,   0,   0]], dtype=int64), array([[ 26,  20,  49,   3,  40,   0],
+       [ 19, 177, 189,   6, 281,   0],
+       [ 30,  24,  68,   2,  77,   0],
+       [  0,   0,   0,   0,   0,   0],
+       [ 67,  85, 164,   4, 158,   1],
+       [  5,   4,   4,   3,   6,   0]], dtype=int64), array([[29, 30,  3,  0, 16,  0],
+       [46, 65, 12,  1, 55,  0],
+       [47, 57, 13,  0, 55,  0],
+       [ 0,  0,  0,  0,  0,  0],
+       [46, 46,  5,  0, 66,  0],
+       [ 5,  4,  1,  0,  3,  0]], dtype=int64), array([[ 0,  1,  0,  0,  0,  0],
+       [16, 69,  3,  0, 28,  1],
+       [ 7, 49,  0,  1, 12,  0],
+       [ 0,  0,  0,  0,  0,  0],
+       [ 8, 31,  0,  0, 15,  0],
+       [ 0,  5,  0,  0,  0,  0]], dtype=int64), array([[ 11,  91,   9, 135,   0],
+       [ 10,  79,  10, 128,   2],
+       [  2,  44,   4,  40,   0],
+       [  9, 144,  12, 156,   0],
+       [  0,   0,   0,   1,   0]], dtype=int64), array([[ 4, 12,  1,  0,  8,  0],
+       [10, 25,  1,  1, 11,  0],
+       [16, 37,  0,  0, 16,  0],
+       [ 0,  2,  0,  0,  0,  0],
+       [ 4, 18,  1,  0,  9,  1],
+       [ 3,  0,  0,  0,  1,  0]], dtype=int64), array([[ 0,  0,  0,  0,  0],
+       [ 8, 69,  2, 24,  2],
+       [ 1, 13,  2,  2,  0],
+       [ 0, 14,  0,  6,  1],
+       [ 0,  0,  0,  0,  0]], dtype=int64), array([[19, 48,  3, 21,  0],
+       [22, 36,  1,  4,  1],
+       [37, 61,  4,  8,  1],
+       [16, 28,  1,  9,  0],
+       [ 0,  0,  0,  0,  0]], dtype=int64), array([[ 1,  3,  0,  0,  1,  0],
+       [34, 37, 22,  2, 17,  5],
+       [21, 24,  9,  4, 28,  3],
+       [ 0,  0,  0,  0,  0,  0],
+       [50, 41,  7,  4, 32,  3],
+       [ 0,  0,  0,  0,  0,  0]], dtype=int64)]
+
+############################################################
+
+MDB data only, 4 instrument classes, baseline set of 10 features, sigmoid kernel
+            precision    recall  f1-score   support
+          CY       0.03      0.21      0.05        61
+          HH       0.32      0.52      0.39       484
+          KD       0.00      0.00      0.00       284
+          SD       0.51      0.22      0.31       802
+    accuracy                           0.27      1631
+   macro avg       0.21      0.24      0.19      1631
+weighted avg       0.35      0.27      0.27      1631
+
+F= 0.27
+confusion matrix= [[ 13  32   0  16]
+ [140 252   0  92]
+ [ 76 145   0  63]
+ [260 364   0 178]]
+
+
+############################################################
+All Data (ESNT+MDB), baseline set of 10 features, sigmoid kernel
+F= 0.23
+confusion matrix= 
+[[  20  384  149   42]
+ [  83 1029  598  111]
+ [  42  623  299   52]
+ [ 109 1037  639  139]]
+
+############################################################
+MDB data only, 4 instrument classes, set of 9 features from logistic reg, sigmoid kernel
+F= 0.29
+             precision    recall  f1-score   support
+          CY       0.02      0.08      0.03        61
+          HH       0.28      0.39      0.33       484
+          KD       0.17      0.18      0.18       284
+          SD       0.51      0.24      0.33       802
+    accuracy                           0.27      1631
+   macro avg       0.25      0.22      0.21      1631
+weighted avg       0.37      0.27      0.29      1631
+
+[[  5  26  17  13]
+ [ 82 189 103 110]
+ [ 41 131  51  61]
+ [167 319 124 192]]
+
+############################################################
+All Data (ESNT+MDB), set of 9 features from logistic reg, sigmoid kernel
+F= 0.25
+confusion matrix= 
+[[127 113 209 146]
+ [515 300 548 458]
+ [325 177 275 239]
+ [498 358 527 541]]
+
+#############################################################
+MDB only, 4 instrument classes, set of 13 features from logistic reg and/or dist. plots, sigmoid kernel
+F= 0.25
+confusion matrix= 
+[[  9  31   4  17]
+ [102 280  18  84]
+ [ 71 153  16  44]
+ [204 460  18 120]]
+
+#############################################################
+All Data (ESNT+MDB), set of 13 features from logistic reg and/or dist. plots, sigmoid kernel
+F= 0.26
+confusion matrix= 
+[[  36  326  128  105]
+ [ 154  889  477  301]
+ [  71  556  239  150]
+ [  84 1065  463  312]]
+
+#############################################################
+ENST data only, baseline set of 10 features, sigmoid kernel
+
+              precision    recall  f1-score   support
+          CY       0.13      0.29      0.18      1842
+          HH       0.26      0.24      0.25      3056
+          KD       0.27      0.29      0.28      3279
+          SD       0.33      0.14      0.19      3873
+    accuracy                           0.23     12050
+   macro avg       0.25      0.24      0.22     12050
+weighted avg       0.26      0.23      0.23     12050
+
+F= 0.23
+confusion matrix= 
+[[ 527  431  639  245]
+ [1038  720  886  412]
+ [1136  767  950  426]
+ [1344  892 1107  530]]
+
+
+9. ENST data only, set of 9 features from logistic reg, sigmoid kernel
+kernel= sigmoid
+
+              precision    recall  f1-score   support
+          CY       0.17      0.32      0.22      1842
+          HH       0.27      0.18      0.21      3056
+          KD       0.27      0.43      0.33      3279
+          SD       0.31      0.09      0.14      3873
+    accuracy                           0.24     12050
+   macro avg       0.25      0.26      0.23     12050
+weighted avg       0.27      0.24      0.22     12050
+
+F= 0.22
+confusion matrix=
+ [[ 586  254  828  174]
+ [ 831  541 1379  305]
+ [ 973  570 1423  313]
+ [1144  652 1720  357]]
+
+10. ENST data only, set of 13 features from logistic reg and/or dist. plots, sigmoid kernel
+
+              precision    recall  f1-score   support
+          CY       0.18      0.24      0.21      1842
+          HH       0.26      0.28      0.27      3056
+          KD       0.28      0.16      0.21      3279
+          SD       0.33      0.37      0.35      3873
+    accuracy                           0.27     12050
+   macro avg       0.26      0.26      0.26     12050
+weighted avg       0.28      0.27      0.27     12050
+
+F= 0.27
+confusion matrix= 
+[[ 451  464  307  620]
+ [ 556  861  457 1182]
+ [ 674  911  538 1156]
+ [ 801 1037  610 1425]]
